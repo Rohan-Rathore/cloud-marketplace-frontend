@@ -1,0 +1,88 @@
+.csp-dashboard{
+    width: 77%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.csp-header-btn{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(254, 254, 254);
+    height: 60px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    align-items: center;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+}
+
+.csp-header-btn > h3 > span{
+    font-family: __Inter_4b5723","__Inter_Fallback_4b5723;
+    font-size: 25px;
+    font-weight: 400; 
+    word-spacing: 0px;
+    text-decoration:underline;
+}
+
+.add-service-link{
+    background-color: #000;
+    color: white;
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+    font-family: __Inter_4b5723","__Inter_Fallback_4b5723;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.add-service-link:hover{
+    color: white;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-box > input{
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    font-size: smaller;
+    border: 1px solid rgb(213, 213, 213);
+}
+
+.search-box > button{
+    background-color: #000;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-family: __Inter_4b5723","__Inter_Fallback_4b5723;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.serivce-detail{
+    height: 4.5rem;
+    /* width: ;  */
+    overflow-y: hidden;
+    text-overflow: ellipsis; 
+    width: inherit;
+    /* white-space: nowrap;  */
+}
+
+.serivce-detail > span{
+    display: block;
+    color: rgb(61, 170, 224);
+    text-decoration: underline;
+    font-size: small;
+    cursor: pointer;
+}

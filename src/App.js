@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import Navbar from './Components/SharedComponents/Navbar';
 import './App.css'
 import Dashboard from './Components/Dashboard/Dashboard';
+import CSPRoutes from './Components/CSPDashboard/CSPRoutes';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
 			<Route path='/about' element={<About />} />
 			<Route path='/contact' element={<Contact />} />
 			<Route path='/session/*' element={<SessionRoutes />} />				
-			<Route path='/dashboard' element={<Dashboard />} />				
+			<Route path='/dashboard' element={<Dashboard />} />		
+			<Route path='/csp/*' element={<CSPRoutes />} />				
 		</Routes>				
     </div>
   );

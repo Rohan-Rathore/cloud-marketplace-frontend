@@ -4,7 +4,7 @@ import Logout from '../Session/Logout';
 import './style/navigation.css'
 const sessionLink = () =>
 {
-  console.log(localStorage.getItem('token'));
+  // console.log(localStorage.getItem('token'));
   if(localStorage.getItem('token'))
   {
     return(
