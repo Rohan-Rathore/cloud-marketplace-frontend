@@ -86,3 +86,49 @@
     font-size: small;
     cursor: pointer;
 }
+
+
+
+/* Add new service css classes */
+.s-input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.s-input > p{
+    font-size: small;
+}
+
+.s-input > input{
+    padding: 5px 5px;
+    border: 1px solid rgba(152, 151, 151, 0.3);
+}
+
+.s-input > textarea{
+    padding: 5px 5px;
+    border: 1px solid rgba(152, 151, 151, 0.3);
+}
+
+.s-category{
+    border: 1px solid rgba(152, 151, 151, 0.3);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.s-category:hover{
+    background-color: #f8f8f8;
+}
+
+.category-active{
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+.category-active:hover{
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
