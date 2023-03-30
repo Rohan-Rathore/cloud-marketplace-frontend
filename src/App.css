@@ -6,3 +6,7 @@
   height: 80px;
   align-items: center;
 }
+.logout-btn{
+  color: #F0A04B;
+  cursor: pointer;
+}

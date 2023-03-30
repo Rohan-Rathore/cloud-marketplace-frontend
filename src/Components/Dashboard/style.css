@@ -1,0 +1,17 @@
+.csp-name{
+  font-size: 1rem;
+  color: rgb(92, 92, 92);
+  font-weight: 500;
+  cursor: pointer;
+}
+.csp-name:hover{
+  text-decoration: underline;
+}
+
+.show-pred-req{
+  /* box-shadow: 0px 0px 10px rgb(234, 234, 234); */
+  /* border: 1px solid rgb(234, 234, 234);
+  border-radius: 2px; */
+  padding: 10px;
+  width: 100%;
+}

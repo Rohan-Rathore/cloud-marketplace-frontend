@@ -1,34 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import Logout from '../Session/Logout';
+import { useNavigate } from 'react-router-dom'
+
 import './style/navigation.css'
-const sessionLink = () =>
-{
-  // console.log(localStorage.getItem('token'));
-  if(localStorage.getItem('token'))
-  {
-    return(
-      <div className='nav-links-2'>
-        <div>
-          <span onClick={()=>Logout()} className='n-link' >Logout</span>
-        </div>
-      </div>
-    )
-  }
-  else{
-    return(
-      <div className='nav-links-2'>
-        <div>
-          <Link to='/session/signup' className='n-link' >Signup</Link>
-        </div>
-        <div>
-          <Link to='/session/login' className='n-link' >Login</Link>
-        </div>
-      </div>
-    )
-  }
-}
-function Navbar() {
+
+
+function Navigation() {
   return (
     <div className='nav-links'>
       <div className='nav-links-1'>
@@ -48,9 +26,24 @@ function Navbar() {
           <Link to='/contact' className='n-link' >Service</Link>
         </div>
       </div>
-      {sessionLink()}
+      { localStorage.getItem('token') ?
+          <div className='nav-links-2'>
+            <div>
+              <span onClick={()=>Logout()} className='n-link logout-btn' >Logout</span>
+            </div>
+          </div>
+        :
+          <div className='nav-links-2'>
+            <div>
+              <Link to='/session/signup' className='n-link' >Signup</Link>
+            </div>
+            <div>
+              <Link to='/session/login' className='n-link' >Login</Link>
+            </div>
+          </div>
+      }
     </div>
   )
 }
 
-export default Navbar
+export default Navigation
