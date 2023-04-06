@@ -36,9 +36,10 @@ function Login() {
         }
       })
      .then((res)=>{
-        console.log(res.data);
-
+        console.log(res);
         localStorage.setItem("token", res.data.token);  //store token in local storage
+        localStorage.setItem("id", res.data.user['_id']);  //store token in local storage
+        localStorage.setItem("role", res.data.user['role']);  //store user_role in local storage
 
         navigate('/dashboard', { replace: true })  //redirect to dashboard 
       }).catch((err)=>{

@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import { Container } from 'react-bootstrap'
 import Navigation from '../SharedComponents/Navigation'
 import ShowPredefineReq from './ShowPredefineReq';
+import ShowCSPOnReq from './ShowCSPOnReq';
 function RoutesDashboard() {
   return (
     <div>
@@ -13,7 +14,8 @@ function RoutesDashboard() {
         </Container>
       </div>
       <Routes>
-        <Route path='/' element={ <Dashboard /> }  ></Route>
+        <Route path='/' element={ <Dashboard /> } ></Route>
+        <Route path='/show-csp-on-req' element={ <ShowCSPOnReq /> }  ></Route>
         <Route path='/dashboard/pre-requirement/:reqId' element={ <ShowPredefineReq /> }  ></Route>
       </Routes>
     </div>

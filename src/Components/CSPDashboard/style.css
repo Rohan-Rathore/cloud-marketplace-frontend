@@ -1,13 +1,21 @@
+.csp-add-service{
+    width: 77%;
+    display: flex;
+}
 .csp-dashboard{
     width: 77%;
     display: flex;
     margin: auto;
     align-items: center;
 }
-
+.show-services{
+    width: 77%;
+    display: flex;
+    margin: auto;
+}
 .csp-header-btn{
-    margin-top: 40px;
-    width: 100%;
+    margin: 40px auto 0px;
+    width: 77%;
     display: flex;
     justify-content: space-between;
     background-color: rgb(254, 254, 254);
@@ -131,4 +139,28 @@
     background-color: #0d6efd;
     color: white;
     border-color: #0d6efd;
+}
+
+.next-btn{
+    text-align: center;
+    background-color: #F0A04B;
+    color: white;
+    width: 90px;
+    padding: 5px;
+    border-radius: 2px;
+}
+.create-service-btn{
+    text-align: center;
+    background-color: #F0A04B;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 150px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.create-service-btn:hover{
+    color: white;
+    text-decoration: underline;
 }

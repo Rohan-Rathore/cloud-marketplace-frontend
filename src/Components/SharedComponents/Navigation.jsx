@@ -28,10 +28,14 @@ function Navigation() {
       </div>
       { localStorage.getItem('token') ?
           <div className='nav-links-2'>
+            { localStorage.getItem('role') === '1' &&
+              <div> <Link className='n-link logout-btn' to='/csp/dashboard' >CSP Dashboard</Link> </div>
+            }
             <div>
               <span onClick={()=>Logout()} className='n-link logout-btn' >Logout</span>
             </div>
           </div>
+          
         :
           <div className='nav-links-2'>
             <div>

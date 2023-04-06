@@ -10,3 +10,8 @@
   color: #F0A04B;
   cursor: pointer;
 }
+
+.logout-btn:hover{
+  color: #F0A04B;
+  text-decoration: underline;
+}

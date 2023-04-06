@@ -5,7 +5,8 @@ import gcp from '../Images/gcp.svg'
 import ibm from '../Images/ibm.svg'
 import heroku from '../Images/heroku.svg'
 import salesforce from '../Images/salesforce.svg'
-import digitalO from '../Images/digital-ocean.png'
+import digitalO from '../Images/digital-ocean.svg'
+import { Link } from 'react-router-dom'
 
 
 function TopCSP() {
@@ -35,8 +36,8 @@ function TopCSP() {
       'csplogo' : salesforce
     }
     ,{
-      'cspname' : 'Heroku Cloud',
-      'csplogo' : heroku
+      'cspname' : 'Digital Ocean',
+      'csplogo' : digitalO
     }
   ]
   return (
@@ -48,7 +49,7 @@ function TopCSP() {
               <img src={csp.csplogo} alt={csp.cspname} />
             </div>
             <div className='col-sm-9'>
-              <span className='csp-name'>{csp.cspname}</span>
+              <Link className='csp-name' to='/csp/services/aws'>{csp.cspname}</Link>
             </div>
           </div>
         )

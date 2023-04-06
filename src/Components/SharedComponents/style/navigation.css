@@ -19,7 +19,7 @@
 .nav-links-2{
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(2, 150px);
 }
 .n-link{
     text-decoration: none;

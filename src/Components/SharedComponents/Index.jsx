@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import './style/navigation.css'
 import './style/index.css'
 import Navigation from './Navigation'
+import { Link } from 'react-router-dom'
 
 function Index() {
   return (
@@ -23,8 +24,8 @@ function Index() {
                 </div>
 
                 <div className='header-btn-coll'>
-                    <div>
-                        <button className='header-btn-first'>Add Requirements</button>
+                    <div className='header-btn-first'>
+                        <Link className='add-req' to='/dashboard'>Add Requirements</Link>
                     </div>
                     <div>
                         <button className='header-btn-second'>Documentation</button>
