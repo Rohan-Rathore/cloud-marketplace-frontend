@@ -2,16 +2,21 @@ import React, {useState} from 'react'
 import '../style.css'
 function ServicePrice({chargeset, priceset}) {
   const [stype, settype] = useState('time');
+  const activeOp = (e) =>{
+    let elem = document.getElementsByClassName('price-op');
+    console.log(elem);
+    e.target.classList.add('bg-active');
+  }
   return (
     <div class="tab-pane fade" id="list-price" role="tabpanel" aria-labelledby="list-price-list">
       <div>
         <p>How the service is charge</p>
         <div className='row row-cols-3 gx-4 gy-4'>
           <div className='col'>
-            <div className='s-category' onClick={()=> {chargeset('time'); settype('time')}}>Time</div>
+            <div className='s-category price-op' onClick={(e)=> {chargeset('time'); settype('time'); activeOp(e)}}>Time</div>
           </div>
           <div className='col'>
-            <div className='s-category' onClick={()=> {chargeset('storage'); settype('storage')}}>Storage</div>
+            <div className='s-category price-op' onClick={()=> {chargeset('storage'); settype('storage')}}>Storage</div>
           </div>
         </div>
       </div>

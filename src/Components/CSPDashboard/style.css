@@ -87,7 +87,7 @@
     /* white-space: nowrap;  */
 }
 
-.serivce-detail > span{
+.read-more{
     display: block;
     color: rgb(61, 170, 224);
     text-decoration: underline;

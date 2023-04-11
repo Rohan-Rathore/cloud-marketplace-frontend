@@ -35,7 +35,7 @@ function Dashboard() {
                 <div className='mt-1'>
                   <div className='fw-bold'>Custom Requirement</div>
                   <p className=''>
-                    we have created some predefine template so you can use it to solve your business problem.
+                    In the custom requirement you have more option to select your csp.
                   </p>
                 </div>
               </div>

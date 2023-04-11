@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 function CustomeReq() {
   const coustom_req = [
-    'We want to host a website',
-    'We want a dedicated hardware',
-    'We want a remote SQL database',
-    'We want a remote NoSQL database'
+    'I want to host a website',
+    'I want a dedicated hardware',
+    'I want a remote SQL database',
+    'I want a remote NoSQL database'
   ]
   return (
     <div className='mt-4'>

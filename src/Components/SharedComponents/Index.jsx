@@ -18,7 +18,7 @@ function Index() {
           <div className='page-header'>
             <div>
                 <span className='header-text'>
-                  Let's Groww your Business</span>
+                  Let's Grow your Business</span>
                 <div  className='header-sub-text'>
                   The Platform that suggest you best cloud service provider on the basis of your business requirements so you can choose best CSP provider.
                 </div>

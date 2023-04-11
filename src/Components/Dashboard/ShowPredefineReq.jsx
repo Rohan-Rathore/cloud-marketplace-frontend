@@ -12,14 +12,16 @@ function ShowPredefineReq(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {props.reqs.details['csp_name']}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p className='lead'>
           {props.reqs.title}
         </p>
-        
+        <div className='fw-bold'>
+          Service - {props.reqs.details['service_name']} 
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

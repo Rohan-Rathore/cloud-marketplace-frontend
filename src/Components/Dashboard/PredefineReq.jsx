@@ -15,24 +15,14 @@ function PredefineReq() {
     },
     {
       'id': '1',
-      'title' : 'Store user profile image and retrive profile image.'
+      'title' : 'Store all students marksheet as a PDF and retrive when it required.',
+      'details' : {
+        'csp_name' : 'Amazon Web Service',
+        'service_name' : 'S3',
+        'price' : '1.0 USD'
+      }
     },
-    {
-      'id': '2',
-      'title' : 'Store all students marksheet as a PDF and retrive when it required.'
-    },
-    {
-      'id': '3',
-      'title' : 'Store user profile image and retrive profile image.'
-    },
-    {
-      'id': '4',
-      'title' : 'Store user profile image and retrive profile image.'
-    },
-    {
-      'id': '5',
-      'title' : 'Store user profile image and retrive profile image.'
-    },
+    
   ]
   const [modalShow, setmodalShow] = useState(false);
   const [reqId, setreqId] = useState(0)

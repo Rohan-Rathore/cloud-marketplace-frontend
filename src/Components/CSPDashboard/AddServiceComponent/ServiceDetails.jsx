@@ -11,7 +11,8 @@ function ServiceDetails({categoryset, tageset}) {
 		'Mobile',
 		'Serverless',
 		'Front end Web',
-		'Game Tech'
+		'Game Tech',
+		'Networking'
 	]
   return (
     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
