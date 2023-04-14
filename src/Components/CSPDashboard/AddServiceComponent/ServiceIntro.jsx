@@ -1,13 +1,55 @@
-import React from 'react'
-
+import axios from 'axios';
+import React, { useState, useEffect } from 'react'
 function ServiceIntro({nameset, descriptionset}) {
+	const header = {
+		'Content-Type': 'application/json',
+		'Authorization': `Bearer ${localStorage.getItem('token')}`
+	}
+	var cspid = localStorage.getItem('id');
+	const [service, setservices] = useState([]);
+	const [sname, setsname] = useState();
+	const [checkSname, setcheckSname] = useState(false);
+	const service_name = [];
+
+  useEffect(() => {
+		axios({
+      method: 'post',
+      url: 'http://localhost:8000/api/csp/services/',
+      headers: header,
+      data: { 
+        csp_id: cspid
+      }
+    })
+   .then((res)=>{
+      setservices(res.data);
+    })
+		.catch((err)=>{
+      console.log(err); //handle error
+    })
+	}, [])
+	
+	const checkservicename = () =>{
+		setcheckSname(false);
+		if (service && sname !== '') {
+			service.map((ser)=>{
+				if (ser.name.toLowerCase() === sname.toLowerCase()) {
+					setcheckSname(true);
+				}
+			})
+			console.log("avail");
+		}
+	}
   return (
-		<div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+		<div className="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+			{	checkSname &&
+				<p className='text-danger'>This service name is already added.</p>
+			}
 			<div className='s-input'>
 				<input 
 					type="text"
 					placeholder='service name' 
-					onChange={(e)=>nameset(e.target.value)}
+					onChange={(e)=>{nameset(e.target.value); setsname(e.target.value)}}
+					onBlur={()=>checkservicename()}
 					/>
 				<p>Enter the Service name like EC2, DynamoDB, S3.</p>
 			</div>

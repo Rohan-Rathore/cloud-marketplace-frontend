@@ -45,7 +45,6 @@ function AddService() {
         }
       })
      .then((res)=>{
-        console.log(res.data['message']);
         setsuccess(res.data['message']);
         seterror('');
       }).catch((err)=>{
@@ -59,35 +58,34 @@ function AddService() {
   }
   return (
     <div className='csp-dashboard'>
-      {console.log(error)}
       <div className='row w-100 my-5'>
         <div className='col-md-3'>
-          <div class="list-group list-group-flush" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Service Intro</a>
-            <a class="list-group-item list-group-item-action" id="list-price-list" data-toggle="list" href="#list-price" role="tab" aria-controls="price">Service Price</a>
-            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Service Details</a>
-            <a class="list-group-item list-group-item-action" id="list-review-list" data-toggle="list" href="#review-service" role="tab" aria-controls="review">Review</a>
+          <div className="list-group list-group-flush" id="list-tab" role="tablist">
+            <a className="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Service Intro</a>
+            <a className="list-group-item list-group-item-action" id="list-price-list" data-toggle="list" href="#list-price" role="tab" aria-controls="price">Service Price</a>
+            <a className="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Service Details</a>
+            <a className="list-group-item list-group-item-action" id="list-review-list" data-toggle="list" href="#review-service" role="tab" aria-controls="review">Review</a>
           </div>
         </div>
         <div className='col-md-9 px-5'>
           {error &&
-            <div class="alert alert-danger" role="alert">
+            <div className="alert alert-danger" role="alert">
               {error}!
             </div>
           }
           {success &&
-            <div class="alert alert-success" role="alert">
+            <div className="alert alert-success" role="alert">
               {success}!
             </div>
           }
-          <div class="tab-content" id="nav-tabContent">
+          <div className="tab-content" id="nav-tabContent">
             <ServiceIntro nameset={setname} descriptionset={setdescription} />
             
             <ServicePrice chargeset={setcharge} priceset={setprice} />
 
             <ServiceDetails categoryset={setcategory} tageset={settage} />
             
-            <div class="tab-pane fade" id="review-service" role="tabpanel" aria-labelledby="list-review-list">
+            <div className="tab-pane fade" id="review-service" role="tabpanel" aria-labelledby="list-review-list">
               <div className='mb-3'>
                 <strong>Service Name - </strong>{name}
               </div>

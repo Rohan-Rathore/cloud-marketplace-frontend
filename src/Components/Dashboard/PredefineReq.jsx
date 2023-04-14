@@ -22,7 +22,6 @@ function PredefineReq() {
         'price' : '1.0 USD'
       }
     },
-    
   ]
   const [modalShow, setmodalShow] = useState(false);
   const [reqId, setreqId] = useState(0)

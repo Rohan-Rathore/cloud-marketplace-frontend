@@ -14,6 +14,13 @@ function ServiceDetails({categoryset, tageset}) {
 		'Game Tech',
 		'Networking'
 	]
+	const changeBgColor = (e) =>{
+		let elements = document.getElementsByClassName('category');
+		for (let index = 0; index < elements.length; index++) {
+			elements[index].classList.remove('bg-light');
+		}
+		e.target.classList.add('bg-light');
+	}
   return (
     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
       <div className=''>
@@ -22,7 +29,7 @@ function ServiceDetails({categoryset, tageset}) {
 					{category_list.map((categ, index) => {
 						return(
 							<div className='col' key={index}>
-								<div className='s-category' onClick={(e)=>categoryset(categ)}>
+								<div className='s-category category' onClick={(e)=>{categoryset(categ); changeBgColor(e)}}>
 									{categ}
 								</div>
 							</div>

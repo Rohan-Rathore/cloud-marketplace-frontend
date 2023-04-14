@@ -8,6 +8,7 @@ import './Components/style/banner.css';
 import './App.css'
 import CSPRoutes from './Components/CSPDashboard/CSPRoutes';
 import RoutesDashboard from './Components/Dashboard/RoutesDashboard';
+import AllServices from './Components/Dashboard/AllServices';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 		<Routes>
 			<Route path='/' element={<Index />} exact />
 			<Route path='/about' element={<About />} />
+			<Route path='/services' element={<AllServices />} />
 			<Route path='/contact' element={<Contact />} />
 			<Route path='/session/*' element={<SessionRoutes />} />				
 			<Route path='/dashboard/*' element={<RoutesDashboard />} />		

@@ -24,7 +24,7 @@ function ShowPredefineReq(props) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <button className='delete-btn'  onClick={props.onHide}>Close</button>
       </Modal.Footer>
     </Modal>
   )

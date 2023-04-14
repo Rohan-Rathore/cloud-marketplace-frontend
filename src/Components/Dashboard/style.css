@@ -21,7 +21,10 @@
   flex-direction: column;
   gap: 5px;
 }
-
+.select-op{
+  padding: 5px 5px;
+  border: 1px solid rgba(152, 151, 151, 0.3);
+}
 .s-input > p{
   font-size: small;
 }
@@ -42,4 +45,50 @@
 .custom-req:hover{
   color: #323131;
   text-decoration: underline;
+}
+
+.delete-btn{
+  background-color: #F0A04B;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 100px;
+  border-radius: 2px;
+}
+
+.cu-show-service{
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  background-color: rgba(247, 247, 247, 0.821);
+}
+.service-logo > i{
+  font-size: 3rem;
+  color: #F0A04B;
+}
+
+.find-service-btn{
+  width: 150px;
+  height: 35px;
+  border: none;
+  background-color: #F0A04B;
+  color: white;
+}
+
+.csp-service-show{
+  margin-top: 20px;
+  padding: 0px 20px;
+  border: 1px solid rgba(152, 151, 151, 0.3);
+  border-radius: 2px;
+}
+.req-service-head{
+  background-color: rgba(247, 247, 247, 0.821);
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.req-service-head > span{
+  font-size: 1.2rem;
 }

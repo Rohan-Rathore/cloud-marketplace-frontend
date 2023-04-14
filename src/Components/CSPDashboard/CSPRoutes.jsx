@@ -5,6 +5,7 @@ import Navigation from '../SharedComponents/Navigation'
 import AddService from './AddService'
 import CSPDashboard from './CSPDashboard'
 import ShowCSPServices from './ShowCSPServices'
+import CompletePorfile from './CompletePorfile'
 
 function CSPRoutes() {
   return (
@@ -16,7 +17,9 @@ function CSPRoutes() {
       </div>
       <Routes>
         <Route path='/dashboard' element={<CSPDashboard />} />
-        <Route path='/add-services' element={<AddService />} />				
+        <Route path='/add-services' element={<AddService />} />
+        
+        <Route path='/complete-profile' element={<CompletePorfile />} />				
         <Route path='/services/:cspname' element={<ShowCSPServices />} />				
       </Routes>	
     </div>

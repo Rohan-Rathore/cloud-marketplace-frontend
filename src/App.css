@@ -15,3 +15,11 @@
   color: #F0A04B;
   text-decoration: underline;
 }
+
+.all-services1{
+  width: 77%;
+  display: flex;
+  margin: 20px auto;
+  height: 100%;
+  align-items: center;
+}

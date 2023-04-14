@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Logout from '../Session/Logout';
-import { useNavigate } from 'react-router-dom'
 
 import './style/navigation.css'
 
@@ -23,7 +22,7 @@ function Navigation() {
           <Link to='/contact' className='n-link' >Docs</Link>
         </div>
         <div>
-          <Link to='/contact' className='n-link' >Service</Link>
+          <Link to='/services' className='n-link' >Service</Link>
         </div>
       </div>
       { localStorage.getItem('token') ?
@@ -31,6 +30,9 @@ function Navigation() {
             { localStorage.getItem('role') === '1' &&
               <div> <Link className='n-link logout-btn' to='/csp/dashboard' >CSP Dashboard</Link> </div>
             }
+            {/* <div>
+              <Link className='n-link logout-btn' to='/csp/complete-profile' >Profile</Link>
+            </div> */}
             <div>
               <span onClick={()=>Logout()} className='n-link logout-btn' >Logout</span>
             </div>
